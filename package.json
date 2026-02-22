@@ -1,0 +1,26 @@
+{
+  "name": "soli-festival-theme",
+  "version": "1.0.0",
+  "description": "Child theme of Twenty Twenty-Five for Soli's Binge Festival",
+  "author": "Muziekvereniging Soli",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "build": "npm run i18n:build",
+    "i18n:make-pot": "wp-env run cli -- bash -c 'php -d memory_limit=512M /usr/local/bin/wp i18n make-pot wp-content/themes/wp-soli-festival-theme wp-content/themes/wp-soli-festival-theme/languages/soli-festival-theme.pot --domain=soli-festival-theme --exclude=node_modules,test-results,playwright-report'",
+    "i18n:make-mo": "wp-env run cli -- bash -c 'php -d memory_limit=512M /usr/local/bin/wp i18n make-mo wp-content/themes/wp-soli-festival-theme/languages'",
+    "i18n:build": "npm run i18n:make-pot && npm run i18n:make-mo",
+    "test:e2e": "wp-scripts test-playwright",
+    "test:e2e:watch": "wp-scripts test-playwright --watch",
+    "test:e2e:debug": "wp-scripts test-playwright --debug",
+    "env:start": "wp-env start",
+    "env:stop": "wp-env stop",
+    "env:reset": "wp-env clean all && wp-env start",
+    "publish": "npm run build && node ./publish.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@wordpress/env": "^10.13.0",
+    "@wordpress/scripts": "^31.0.0",
+    "archiver": "^7.0.0"
+  }
+}

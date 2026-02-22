@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Soli Festival Theme - Custom Styles
+   Editorial design inspired by the Soli Binge Festival newsletters.
+   ========================================================================== */
+
+/* ==========================================================================
+   Base & Typography
+   ========================================================================== */
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Lead paragraphs - use the "has-large-font-size" class in the editor */
+.has-large-font-size {
+	line-height: 1.4;
+}
+
+/* ==========================================================================
+   Images & Media
+   ========================================================================== */
+
+.wp-block-image img {
+	border-radius: 8px;
+}
+
+figure.wp-block-image.alignwide img {
+	border-radius: 10px;
+}
+
+@media (max-width: 820px) {
+	figure.wp-block-image.alignwide {
+		margin-left: calc(-1 * clamp(1rem, 5vw, 2rem)) !important;
+		margin-right: calc(-1 * clamp(1rem, 5vw, 2rem)) !important;
+		max-width: none !important;
+		width: auto;
+	}
+
+	figure.wp-block-image.alignwide img {
+		border-radius: 0;
+	}
+}
+
+.wp-block-image figcaption {
+	color: var(--wp--preset--color--accent-3);
+	font-size: var(--wp--preset--font-size--small);
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+/* ==========================================================================
+   Separator / Dividers
+   ========================================================================== */
+
+.wp-block-separator {
+	border-color: var(--wp--preset--color--accent-6);
+	opacity: 1;
+}
+
+/* ==========================================================================
+   Header & Footer
+   ========================================================================== */
+
+.wp-block-site-title a {
+	text-decoration: none;
+	font-weight: 700;
+}
+
+/* ==========================================================================
+   Group blocks used as sections
+   ========================================================================== */
+
+.wp-block-group.has-accent-4-background-color {
+	border-radius: 8px;
+	padding: 2rem;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+.wp-block-list {
+	padding-left: 1.25rem;
+}
+
+.wp-block-list li {
+	margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.wp-block-button .wp-block-button__link {
+	border-radius: 6px;
+	font-weight: 500;
+	padding: 0.75rem 1.5rem;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ==========================================================================
+   Social Links (footer)
+   ========================================================================== */
+
+.wp-block-social-links .wp-social-link {
+	transition: opacity 0.2s ease;
+}
+
+.wp-block-social-links .wp-social-link:hover {
+	opacity: 0.7;
+}
